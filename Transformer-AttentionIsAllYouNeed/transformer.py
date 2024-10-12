@@ -25,6 +25,10 @@ class SelfAttention(nn.Module):
         values = values.reshape(N, value_len, self.heads, self.head_dim)
         keys = keys.reshape(N, key_len, self.heads, self.head_dim)
         queries = query.reshape(N, query_len, self.heads, self.head_dim)
+
+        values = self.values(values)
+        keys = self.keys(keys)
+        queries = self.queries(queries)
         
         energy = torch.einsum("nqhd, nkhd-->nhqk", [queries, keys])
 
@@ -218,3 +222,5 @@ class Transformer(nn.Module):
 
         out = self.decoder(trg, enc_src, src_mask, trg_mask)
         return out
+    
+
