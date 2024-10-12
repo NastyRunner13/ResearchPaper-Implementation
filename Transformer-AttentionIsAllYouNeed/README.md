@@ -1,6 +1,6 @@
 # Transformer Model Implementation
 
-This repository contains a PyTorch implementation of the Transformer model, as described in the paper "Attention Is All You Need" by Vaswani et al. The Transformer is a powerful neural network architecture that has revolutionized natural language processing tasks.
+This repository contains a PyTorch implementation of the Transformer model, as described in the paper ["Attention Is All You Need"](https://arxiv.org/pdf/1706.03762.pdf) by Vaswani et al. The Transformer is a powerful neural network architecture that has revolutionized natural language processing tasks.
 
 ## Model Architecture
 
